@@ -92,7 +92,7 @@ angular.module('ui.tinymce', [])
             // - the editor content has been modified [change]
             // - the node has changed [NodeChange]
             // - an object has been resized (table, image) [ObjectResized]
-            ed.on('ExecCommand change NodeChange ObjectResized', function() {
+            ed.on('ExecCommand change NodeChange ObjectResized paste undo redo', function() {
               if (!options.debounce) {
                 ed.save();
                 updateView(ed);
