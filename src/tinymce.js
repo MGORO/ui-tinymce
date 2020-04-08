@@ -103,7 +103,6 @@ angular.module('ui.tinymce', [])
 
             ed.on('paste', function(e) {
               $timeout(function() {
-                console.log('about to update view due to paste');
                 updateView(ed);
                 ed.save();
               });
